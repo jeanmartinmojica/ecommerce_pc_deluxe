@@ -11,8 +11,16 @@
     align-items: center;
     justify-content: space-between;
     margin: 5px;
-    padding: 10px;
     border-bottom: solid 1px black;
+}
+.main_menu .btn_menu{
+    float: left;
+    line-height: 15%;
+}
+.main_menu .btn_menu label{
+    font-size: 40px;
+    margin-left: 12px;
+    cursor: pointer;
 }
 .main_menu a{
     text-decoration: none;
@@ -20,26 +28,78 @@
     font-size: 20px;
 }
 .main_menu img{
-    max-width: 50px;
-    padding: 10px;
+    width: 50px;
+    margin-left: 10px;
 }
 .main_menu_logos{
-    width: 15%;
+    width: 12%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    
+    justify-content: space-around;
 }
 .main_menu_h1{
-    padding-left: 120px;
+    text-align: center;
     font-size:x-large;
 }
+#btn-menu{
+    display: none;
+}
+.lateral_menu{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0%;
+    left: 0%;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;   
+}
+#btn-menu:checked ~ .lateral_menu{
+    opacity: 1;
+    visibility: visible; 
+}
+.la_menu{
+    width: 100%;
+    max-width: 250px;
+    background: whitesmoke;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);  
+}
+#btn-menu:checked ~ .lateral_menu .la_menu{
+    transform: translateX(0%); 
+}
+.la_menu nav{
+    transform: translateY(15%);
+}
+.la_menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;  
+}
+.la_menu nav a:hover{
+    border-left: 5px #c7c7c7;
+    background: darkred;
+}
+.la_menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
 /* Second menu config */
 .second_menu{
     display: flex;
     justify-content: space-evenly;
     margin: 5px;
-    padding: 20px;
 }
 .second_menu a{
     text-decoration: none;
@@ -51,7 +111,8 @@ main{
     text-align: center;
 }
 main img{
-    max-width: 95%;
+    max-width: 100%;
+    margin: 5px;
 }
 /* Footer config */
 footer{
@@ -121,206 +182,175 @@ footer{
     justify-content: center;
 }
 
-/*Pagina Tenis*/
+@media screen and (min-width: 320px) {
+    
+    /*Paginas Tenis, Dama y Caballero*/
 
-#main_tenis aside,
-#tenis_articles {
-    border-radius: 15px;
-    padding: 20px;
-}
-#main_tenis ul li {
-    padding: 5px;   
-}
-#main_tenis a{
-    text-decoration: none;
-    color: black;
-}
-#main_tenis ul {
-    list-style-type: none;
-}
-.tenis_category,
-#tenis_articles h3{
-    font-size: 20px;
-}
-#tenis_articles h3{
-    text-align: center;
-}
-#tenis_articles button {
-    border-radius: 5px;
-    padding: 5px;
-    background-color: darkred;
-    text-decoration: none;
-    color:white;
-}
-.tenis_subcategory{
-    margin-left: 10px;
-}
-#tenis_articles img{
-    width: 400px;
-    height: 400px;
-}
-#tenis_articles {
-    grid-area: tenis_articles;
-}
+    #main_categ,
+    #categ_articles {
+        border-radius: 15px;
+        padding: 20px;
+    }
+    #main_categ ul li {
+        padding: 5px;   
+    }
+    #main_categ a{
+        text-decoration: none;
+        color: black;
+    }
+    #categ_articles h3{
+        font-size: 20px;
+        text-align: center;
+    }
+    #categ_articles button {
+        border-radius: 5px;
+        padding: 5px;
+        background-color: darkred;
+        text-decoration: none;
+        color:white;
+    }
+    #categ_articles img{
+        width: auto;
+        height: auto;
+    }
+    #categ_articles {
+        grid-area: categ_articles;
+    }
 
-#tenis_list {
-    grid-area: tenis_list;
-}
+    #main_categ,
+    #categ_articles {
+        display: grid;
+    }
+    #main_categ{
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        column-gap: 10px;
+        row-gap: 10px;
+        grid-template-areas: "categ_articles";
+    }
 
-#main_tenis,
-#tenis_articles,
-#tenis_list {
-    display: grid;
-}
-#main_tenis{
-    grid-template-columns: auto;
-    grid-template-rows: 15% auto auto;
-    column-gap: 10px;
-    row-gap: 10px;
-    grid-template-areas: "tenis_list tenis_articles tenis_articles";
+    #categ_articles{
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        column-gap: 15px;
+        row-gap: 15px;
+        justify-items: stretch;
+        align-items: stretch;
+    }
 }
 
-#tenis_articles{
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    column-gap: 15px;
-    row-gap: 15px;
-    justify-items: stretch;
-    align-items: stretch;
+@media screen and (min-width: 768px) {
+
+    /*Paginas Tenis, Dama y Caballero*/
+
+    #main_categ,
+    #categ_articles {
+        border-radius: 15px;
+        padding: 20px;
+    }
+    #main_categ ul li {
+        padding: 5px;   
+    }
+    #main_categ a{
+        text-decoration: none;
+        color: black;
+    }
+    #categ_articles h3{
+        font-size: 20px;
+        text-align: center;
+    }
+    #categ_articles button {
+        border-radius: 5px;
+        padding: 5px;
+        background-color: darkred;
+        text-decoration: none;
+        color:white;
+    }
+    #categ_articles img{
+        width: auto;
+        height: auto;
+    }
+    #categ_articles {
+        grid-area: categ_articles;
+    }
+
+    #main_categ,
+    #categ_articles {
+        display: grid;
+    }
+    #main_categ{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        column-gap: 10px;
+        row-gap: 10px;
+        grid-template-areas: "categ_articles categ_articles";
+    }
+
+    #categ_articles{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        column-gap: 15px;
+        row-gap: 15px;
+        justify-items: stretch;
+        align-items: stretch;
+    }
 }
 
-/*Pagina Dama*/
+@media screen and (min-width: 1200px) {
 
-#main_woman aside,
-#woman_articles {
-    border-radius: 15px;
-    padding: 20px;
-}
-#main_woman ul li {
-    padding: 5px;   
-}
-#main_woman a{
-    text-decoration: none;
-    color: black;
-}
-#main_woman ul {
-    list-style-type: none;
-}
-.woman_category,
-#woman_articles h3{
-    font-size: 20px;
-}
-#woman_articles h3{
-    text-align: center;
-}
-#woman_articles button {
-    border-radius: 5px;
-    padding: 5px;
-    background-color: darkred;
-    text-decoration: none;
-    color:white;
-}
-.woman_subcategory{
-    margin-left: 10px;
-}
-#woman_articles img{
-    width: 300px;
-    height: 300px;
-}
-#woman_articles {
-    grid-area: woman_articles;
-}
+    /*Paginas Tenis, Dama y Caballero*/
 
-#woman_list {
-    grid-area: woman_list;
-}
+    #main_categ,
+    #categ_articles {
+        border-radius: 15px;
+        padding: 20px;
+    }
+    #main_categ ul li {
+        padding: 5px;   
+    }
+    #main_categ a{
+        text-decoration: none;
+        color: black;
+    }
+    #categ_articles h3{
+        font-size: 20px;
+        text-align: center;
+    }
+    #categ_articles button {
+        border-radius: 5px;
+        padding: 5px;
+        background-color: darkred;
+        text-decoration: none;
+        color:white;
+    }
+    #categ_articles img{
+        width: auto;
+        height: auto;
+    }
+    #categ_articles {
+        grid-area: categ_articles;
+    }
 
-#main_woman,
-#woman_articles,
-#woman_list {
-    display: grid;
-}
-#main_woman{
-    grid-template-columns: auto;
-    grid-template-rows: 15% auto auto;
-    column-gap: 10px;
-    row-gap: 10px;
-    grid-template-areas: "woman_list woman_articles woman_articles";
-}
+    #main_categ,
+    #categ_articles {
+        display: grid;
+    }
+    #main_categ{
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        column-gap: 10px;
+        row-gap: 10px;
+        grid-template-areas: "categ_articles categ_articles" "categ_articles";
+    }
 
-#woman_articles{
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    column-gap: 15px;
-    row-gap: 15px;
-    justify-items: stretch;
-    align-items: stretch;
-}
+    #categ_articles{
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        column-gap: 15px;
+        row-gap: 15px;
+        justify-items: stretch;
+        align-items: stretch;
+    }
 
-/*Pagina Caballero*/
 
-#main_man aside,
-#woman_articles {
-    border-radius: 15px;
-    padding: 20px;
-}
-#main_man ul li {
-    padding: 5px;   
-}
-#main_man a{
-    text-decoration: none;
-    color: black;
-}
-#main_man ul {
-    list-style-type: none;
-}
-.man_category,
-#man_articles h3{
-    font-size: 20px;
-}
-#man_articles h3{
-    text-align: center;
-}
-#man_articles button {
-    border-radius: 5px;
-    padding: 5px;
-    background-color: darkred;
-    text-decoration: none;
-    color:white;
-}
-.man_subcategory{
-    margin-left: 10px;
-}
-#man_articles img{
-    width: 300px;
-    height: 300px;
-}
-#man_articles {
-    grid-area: woman_articles;
-}
-
-#man_list {
-    grid-area: woman_list;
-}
-
-#main_man,
-#man_articles,
-#man_list {
-    display: grid;
-}
-#main_man{
-    grid-template-columns: auto;
-    grid-template-rows: 15% auto auto;
-    column-gap: 10px;
-    row-gap: 10px;
-    grid-template-areas: "woman_list woman_articles woman_articles";
-}
-
-#man_articles{
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    column-gap: 15px;
-    row-gap: 15px;
-    justify-items: stretch;
-    align-items: stretch;
 }

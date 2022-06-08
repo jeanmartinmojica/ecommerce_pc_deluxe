@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Tennis</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <script src="https://kit.fontawesome.com/0a266fd43a.js" crossorigin="anonymous"></script>
 </head>
@@ -12,11 +12,11 @@
     <header>
         <nav>
             <div class="main_menu">
-                <div>
-                    <a href="../index.html"><img src="../assets/main_menu_logo.JPG" alt="logo_principal">
+                <div class="btn_menu">
+                    <label for="btn-menu"class="fa-solid fa-bars"></label>
                 </div>
                 <div class="main_menu_h1">
-                    <h1>TENIS CLUB BOGOTÁ</h1>
+                    <h1>TENNIS CLUB</h1>
                 </div>
                 <div class="main_menu_logos">
                     <div class="main_menu_logos_search">
@@ -32,57 +32,49 @@
             </div>
         </nav>
     </header>
-    <div id="main_tenis">    
-        <aside id="tenis_list">
-            <ul>
-                <li class="tenis_category"><a href="#">RAQUETAS</a></li>
-                <li class="tenis_subcategory"><a href="#">Wilson</a></li>
-                <li class="tenis_subcategory"><a href="#">Babolat</a></li>  
-                <li class="tenis_subcategory"><a href="#">Head</a></li>  
-                <li class="tenis_subcategory"><a href="#">Yonex</a></li>     
-                <li class="tenis_category"><a href="#">PELOTAS</a></li>
-                <li class="tenis_subcategory"><a href="#">Premium</a></li>
-                <li class="tenis_subcategory"><a href="#">Club</a></li>
-                <li class="tenis_subcategory"><a href="#">Infantil</a></li>
-                <li class="tenis_category"><a href="#">MALETAS DE TENIS</a></li>
-                <li class="tenis_subcategory"><a href="#">Maletas</a></li>
-                <li class="tenis_subcategory"><a href="#">Backpacks</a></li>
-                <li class="tenis_subcategory"><a href="#">Thermobags</a></li>
-                <li class="tenis_category"><a href="#">CUERDAS</a></li>
-                <li class="tenis_subcategory"><a href="#">Wilson</a></li>
-                <li class="tenis_subcategory"><a href="#">Babolat</a></li>  
-                <li class="tenis_subcategory"><a href="#">Head</a></li>  
-                <li class="tenis_subcategory"><a href="#">Yonex</a></li> 
-                <li class="tenis_category"><a href="#">ACCESORIOS</a></li>
-                <li class="tenis_subcategory"><a href="#">Grips</a></li>
-                <li class="tenis_subcategory"><a href="#">OverGrips</a></li>
-                <li class="tenis_subcategory"><a href="#">Antivibradores</a></li>
-                <li class="tenis_subcategory"><a href="#">Otros accesorios</a></li>
-            </ul>
-        </aside>
-        <section id="tenis_articles">
-            <article>
-                <img src="../assets/Raqueta.png">
-                <h3>Wilson prostaff 6.0</h3>
-                <button>Comprar</button>
-            </article>
-            <article>
-                <img src="../assets/Raqueta.png">
-                <h3>Wilson prostaff 6.0</h3>
-                <button>Comprar</button>
-            </article>
-            <article>
-                <img src="../assets/Raqueta.png">
-                <h3>Wilson prostaff 6.0</h3>
-                <button>Comprar</button>
-            </article>
-            <article>
-                <img src="../assets/Raqueta.png">
-                <h3>Wilson prostaff 6.0</h3>
-                <button>Comprar</button>
-            </article>
-        </section>
+
+    <input type="checkbox" id="btn-menu">
+    <div class="lateral_menu">
+        <div class="la_menu">
+            <nav>
+                <a href="#">RAQUETAS</a>
+                <a href="#">PELOTAS</a>
+                <a href="#">MALETAS DE TENIS</a>
+                <a href="#">CUERDAS</a>
+                <a href="#">ACCESORIOS</a>
+                <a href="../index.html">MENÚ PRINCIPAL</a>
+            </nav>
+            <label for="btn-menu" class="fa-solid fa-circle-xmark"></label>
+        </div>
     </div>
+
+    <main>
+        <div id="main_categ">    
+            <section id="categ_articles">
+                <article>
+                    <img src="../assets/Raqueta.png">
+                    <h3>Wilson prostaff 6.0</h3>
+                    <button>Comprar</button>
+                </article>
+                <article>
+                    <img src="../assets/Raqueta.png">
+                    <h3>Wilson prostaff 6.0</h3>
+                    <button>Comprar</button>
+                </article>
+                <article>
+                    <img src="../assets/Raqueta.png">
+                    <h3>Wilson prostaff 6.0</h3>
+                    <button>Comprar</button>
+                </article>
+                <article>
+                    <img src="../assets/Raqueta.png">
+                    <h3>Wilson prostaff 6.0</h3>
+                    <button>Comprar</button>
+                </article>
+            </section>
+        </div>
+    </main>
+    
     <footer>
         <div class="footer">
             <div class="footer_options">
@@ -97,4 +89,5 @@
             </div>
         </div>
     </footer>
+
 </body>
