@@ -2,10 +2,17 @@
 *{
     font-family: 'Heebo', sans-serif;
     background-color: whitesmoke;
+    color: black;
     padding: 0;
     margin: 0;
 }
-/* Top menu config */
+/* Navbar config */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px black;
+}
 .main_menu{
     display: flex;
     align-items: center;
@@ -24,15 +31,18 @@
 }
 .main_menu a{
     text-decoration: none;
-    color: black;
     font-size: 20px;
 }
 .main_menu img{
     width: 50px;
     margin-left: 10px;
 }
+.navbar a{
+    text-decoration: none;
+    font-size: 20px;
+}
 .main_menu_logos{
-    width: 12%;
+    width: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -94,29 +104,47 @@
     font-size: 18px;
 }
 
+/* Second nav*/
 
-/* Second menu config */
-.second_menu{
+.second_nav{
     display: flex;
     justify-content: space-evenly;
-    margin: 5px;
+    list-style: none;
 }
-.second_menu a{
+.second_nav a{
     text-decoration: none;
     padding: 20px;
-    font-size: 30px;
+    font-size: 25px;
     color: black;
 }
 main{
     text-align: center;
 }
-main img{
-    max-width: 100%;
-    margin: 5px;
+
+/* adds config*/
+
+.adds img{
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
+.adds button{
+    margin-bottom: 10px;
+}
+/* products config */
+
+.products img{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    max-width: 100%;
+}
+.products button{
+    margin-bottom: 10px;
+}
+
 /* Footer config */
 footer{
     text-align: center;
+    border-top: solid 1px black;
 }
 .footer{
     display: flex;
@@ -351,6 +379,5 @@ footer{
         justify-items: stretch;
         align-items: stretch;
     }
-
 
 }

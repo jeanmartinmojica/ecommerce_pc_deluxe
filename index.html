@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TENNIS CLUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://kit.fontawesome.com/0a266fd43a.js" crossorigin="anonymous"></script>
 </head>
@@ -13,46 +14,68 @@
 <body>
 
     <header>
-        <nav>
-            <div class="main_menu">
-                <div class="btn-menu">
-                    <a href="#"><img src="assets/main_menu_logo.JPG" alt="logo_principal">
-                </div>
-                <div class="main_menu_h1">
-                    <h1>TENNIS CLUB</h1>
-                </div>
-                <div class="main_menu_logos">
-                    <div class="main_menu_logos_search">
-                        <a href="#"><i class="fa-solid fa-magnifying-glass fa-2x"></i></a>
-                    </div>
-                    <div class="main_menu_logos_bag">
-                        <a href="#"><i class="fa-solid fa-bag-shopping fa-2x"></i></a>
-                    </div>
-                    <div class="main_menu_logos_user">
-                        <a href="#"><i class="fa-solid fa-user fa-2x"></i></a></button>
-                    </div>
-                </div>    
+        <nav class="navbar bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/main_menu_logo.JPG" alt="" width="50" height="50">
+                </a>
+                <h2>TENNIS CLUB</h2>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
             </div>
         </nav>
     </header>
     
     <main>
-        <div class="second_menu">
-            <a href="pages/products_tenis.html">Tenis</a>
-            <a href="pages/products_women.html">Dama</a>
-            <a href="pages/products_man.html">Caballero</a>
-        </div>
-        <div class="main_image">
-            <img src="assets/main_image.jpg" alt="main_image">
-        </div>
+
+        <ul class="second_nav">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="pages/products_tenis.html">Tennis</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pages/products_women.html">Dama</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pages/products_man.html">Caballero</a>
+            </li>
+        </ul>
+
+        <section class="adds">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-xl-3">
+                        <img src="assets/main_raquets.PNG">
+                        <h4>Raquetas</h4>
+                        <button type="button" class="btn btn-outline-success">Ir</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3">
+                        <img src="assets/main_bags.PNG">
+                        <h4>Maletas</h4>
+                        <button type="button" class="btn btn-outline-success">Ir</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3">
+                        <img src="assets/main_shoes.PNG">
+                        <h4>Calzado</h4>
+                        <button type="button" class="btn btn-outline-success">Ir</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-xl-3">
+                        <img src="assets/main_balls.PNG">
+                        <h4>Pelotas</h4>
+                        <button type="button" class="btn btn-outline-success">Ir</button>
+                    </div>
+                </div>
+            </div>
+        </section>
         
     </main>
 
     <footer>
         <div class="footer">
             <div class="footer_options">
-                <a href="pages/location.html">Nuestras Tiendas</a>
-                <a href="pages/contact.html">Contáctenos</a>
+                <a href="pages/location.html">Tiendas</a>
+                <a href="pages/contact.html">Contacto</a>
                 <a href="pages/tutorials.html">Tutoriales</a>
             </div>
             <div class="footer_social_networks">
