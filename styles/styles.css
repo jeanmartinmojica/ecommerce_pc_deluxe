@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap');
 *{
     font-family: 'Heebo', sans-serif;
-    background-color: whitesmoke;
+    background-color: white;
     color: black;
     padding: 0;
     margin: 0;
@@ -53,7 +53,7 @@
 .la_menu{
     width: 100%;
     max-width: 250px;
-    background: whitesmoke;
+    background: white;
     height: 100vh;
     position: relative;
     transition: all 500ms ease;
@@ -75,7 +75,8 @@
 }
 .la_menu nav a:hover{
     border-left: 5px #c7c7c7;
-    background: darkred;
+    background: #067e3d;
+    color: white;
 }
 .la_menu label{
     position: absolute;
@@ -105,8 +106,10 @@ main{
 /* adds config*/
 
 .adds img{
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+    height: 75%;
 }
 .adds button{
     margin-bottom: 10px;
@@ -116,10 +119,28 @@ main{
 .products img{
     margin-bottom: 10px;
     margin-top: 10px;
-    max-width: 100%;
+    width: 100%;
+    height: 70%;
 }
 .products button{
     margin-bottom: 10px;
+}
+.brand{
+    margin: 5px;
+    padding: 10px;
+}
+.dropdowns{
+    margin: 5px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter_phrase{
+    margin: 5px;
+    padding-right: 10px;
+    padding-top: 15px;
+    font-size: medium;
 }
 
 /* Footer config */
