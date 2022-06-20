@@ -11,12 +11,14 @@
     <script src="https://kit.fontawesome.com/0a266fd43a.js" crossorigin="anonymous"></script>
 </head>
 
+<body>
+    
     <header>
         <nav class="navbar bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">
-                    <img src="../assets/main_menu_logo.JPG" alt="" width="50" height="50">
-                </a>
+                <div class="btn_menu">
+                    <label for="btn-menu"class="fa-solid fa-bars"></label>
+                </div>
                 <h2>TENNIS CLUB</h2>
                 <div class="main_menu_logos">
                     <div class="main_menu_logos_bag">
@@ -29,6 +31,20 @@
             </div>
         </nav>
     </header>
+
+    <input type="checkbox" id="btn-menu">
+    <div class="lateral_menu">
+        <div class="la_menu">
+            <nav>
+                <a href="raquets.html">Raquetas</a>
+                <a href="products_women.html">Dama</a>
+                <a href="products_man.html">Caballero</a>
+                <a href="products_tenis.html">Accesorios</a>
+                <a href="../index.html">Página Principal</a>
+            </nav>
+            <label for="btn-menu" class="fa-solid fa-circle-xmark"></label>
+        </div>
+    </div>
 
     <main>
         <h4 class="title_map">Encuentranos en el centro comercial TITAN PLAZA:</h4>

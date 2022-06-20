@@ -14,9 +14,9 @@
     <header>
         <nav class="navbar bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">
-                    <img src="../assets/main_menu_logo.JPG" alt="" width="50" height="50">
-                </a>
+                <div class="btn_menu">
+                    <label for="btn-menu"class="fa-solid fa-bars"></label>
+                </div>
                 <h2>TENNIS CLUB</h2>
                 <div class="main_menu_logos">
                     <div class="main_menu_logos_bag">
@@ -30,27 +30,43 @@
         </nav>
     </header>
 
-    <form class="contact_form">
-        <div class="form_name">
-            <label for="name">Nombre:</label>
-            <input type="text" name="nombre" placeholder="Ingrese su nombre">
+    <input type="checkbox" id="btn-menu">
+    <div class="lateral_menu">
+        <div class="la_menu">
+            <nav>
+                <a href="raquets.html">Raquetas</a>
+                <a href="products_women.html">Dama</a>
+                <a href="products_man.html">Caballero</a>
+                <a href="products_tenis.html">Accesorios</a>
+                <a href="../index.html">Página Principal</a>
+            </nav>
+            <label for="btn-menu" class="fa-solid fa-circle-xmark"></label>
         </div>
-        <div class="form_last_name">
-            <label for="last_name">Apellido:</label>
-            <input type="text" name="apellido" placeholder="Ingrese su apellido">
-        </div>
-        <div class="comments_field_tittle">
-            Cuentenos el motivo de su contacto:
-        </div>
-        <div class="comments_field">
-            <textarea name="text" id="" cols="40" rows="7" placeholder="Escriba aquí su motivo de contacto"></textarea>
-        </div>
-        <div class="form_buttons">
-            <button type="submit" class="btn btn-outline-success">Enviar</button>
-            <button type="reset" class="btn btn-outline-danger">Borrar</button>
-        </div>    
+    </div>
         
-    </form>
+    <main>
+        <form class="contact_form">
+            <div class="form_name">
+                <label for="name">Nombre:</label>
+                <input type="text" name="nombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="form_last_name">
+                <label for="last_name">Apellido:</label>
+                <input type="text" name="apellido" placeholder="Ingrese su apellido">
+            </div>
+            <div class="comments_field_tittle">
+                Cuentenos el motivo de su contacto:
+            </div>
+            <div class="comments_field">
+                <textarea name="text" id="" cols="40" rows="7" placeholder="Escriba aquí su motivo de contacto"></textarea>
+            </div>
+            <div class="form_buttons">
+                <button type="submit" class="btn btn-outline-success">Enviar</button>
+                <button type="reset" class="btn btn-outline-danger">Borrar</button>
+            </div>    
+            
+        </form>
+    </main>
 
     <footer>
         <div class="footer">
