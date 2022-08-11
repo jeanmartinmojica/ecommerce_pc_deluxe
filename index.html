@@ -1,84 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TENNIS CLUB</title>
+    <meta name="description" content="Tennis Club ofrece una larga selección de raquetas, de las marcas: Wilson, Babolat, Head y Yonex">
+    <meta name="keywords" content="Tennis, Tenis, Club, Raquetas, Wilson, Babolat, Head, Yonex">
+    <title>PC DELUXE</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/0a266fd43a.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-
-    <header>
-        <nav class="navbar bg-light">
-            <div class="container-fluid">
-                <img src="assets/main_menu_logo.JPG" alt="">
-                <h2>TENNIS CLUB</h2>
-                <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
+    <header class="header1">
+        <nav class="nav_bar">
+            <div class="main_grid_header"> 
+                <div class="logo"><a href=""><h1>PC DELUXE</h1><i id="control_logo" class="fa-solid fa-gamepad"></i></a></div>
+                <div class="carrito_div"><a href=""><i class="fa-solid fa-bag-shopping fa-2x"></i></a></div>        
             </div>
         </nav>
     </header>
     
     <main>
-        <section class="adds">
+        <div id="main_picture" class="img-fluid">
+            <img src="https://www.somosxbox.com/wp-content/uploads/2022/01/montar-tu-primer-setup-gaming-1.jpg" alt="">
+            <div class="bienvenidos_ver_productos_div">
+                <div class="bienvenidos_inner_div">Bienvenidos a PC DELUXE</div>               
+                <div class="ver_producto_btn"> <a href="#Teclados"><button type="button" class="btn btn-info">VER PRODUCTOS</button></a></div>
+            </div>
+        </div>
+        <section class="products">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 col-xl-3">
-                        <img src="assets/main_raquets.PNG" alt="">
-                        <h4>Raquetas</h4>
-                        <a href="pages/raquets.html">
-                        <button type="button" class="btn btn-outline-success">Ir</button>
-                        </a>
+                    <div class="brand">
+                        <h4 id="Teclados">Teclados</h4>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3">
-                        <img src="assets/main_women.PNG" alt="">
-                        <h4>Dama</h4>
-                        <a href="pages/products_women.html">
-                        <button type="button" class="btn btn-outline-success">Ir</button>
-                        </a>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <img src="assets/Teclados/Alnilam.jpg" alt="">
+                        <h5>Anilam (Mecánico Completo)</h5>
+                        <h6>$60</h6>
+                        <button type="button" class="btn btn-info">Agregar al Carrito</button>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3">
-                        <img src="assets/main_man.PNG" alt="">
-                        <h4>Caballero</h4>
-                        <a href="pages/products_man.html">
-                        <button type="button" class="btn btn-outline-success">Ir</button>
-                        </a>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <img src="assets/Teclados/Mintaka.jpg" alt="">
+                        <h5>Mintaka (Mecánico Tamaño 60%)</h5>
+                        <h6>$50</h6>
+                        <button type="button" class="btn btn-info">Agregar al Carrito</button>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-xl-3">
-                        <img src="assets/main_accessories.PNG" alt="">
-                        <h4>Accesorios</h4>
-                        <a href="pages/products_tenis.html">
-                            <button type="button" class="btn btn-outline-success">Ir</button>
-                        </a>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <img src="assets/Teclados/Pulsar.jpg" alt="">
+                        <h5>Pulsar (TKL)</h5>
+                        <h6>$100</h6>
+                        <button type="button" class="btn btn-info">Agregar al Carrito</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <img src="assets/Teclados/Quasar RGB.jpg" alt="">
+                        <h5>Quasar Rgb (TKL Outemu)</h5>
+                        <h6>$90</h6>
+                        <button type="button" class="btn btn-info">Agregar al Carrito</button>
+                    </div>
+
+                    <div class="brand">
+                        <h4 id="Audifonos">Audifonos</h4>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <img src="assets/Audifonos/Arkan.jpg" alt="">
+                        <h5>Arkan (USB)</h5>
+                        <h6>$70</h6>
+                        <button type="button" class="btn btn-info">Agregar al Carrito</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <img src="assets/Audifonos/Gemini.jpg" alt="">
+                        <h5>Gemini (TRRS 3.5 Mm)</h5>
+                        <h6>$40</h6>
+                        <button type="button" class="btn btn-info">Agregar al Carrito</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <img src="assets/Audifonos/Gravity.jpg" alt="">
+                        <h5>Gravity (Inalámbrico)</h5>
+                        <h6>$150</h6>
+                        <button type="button" class="btn btn-info">Agregar al Carrito</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <img src="assets/Audifonos/Singularity.jpg" alt="">
+                        <h5>Singularity (USB)</h5>
+                        <h6>$100</h6>
+                        <button type="button" class="btn btn-info">Agregar al Carrito</button>
+                    </div>
+
+                    <div class="brand">
+                        <h4 id="Head">Mouse</h4>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <img src="assets/Mouses/Aquila_Air.jpg" alt="">
+                        <h5>Aquila Air (Alámbrico 60g)</h5>
+                        <h6>$28</h6>
+                        <button type="button" class="btn btn-info">Agregar al Carrito</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <img src="assets/Mouses/Aquila_Fly.jpg" alt="">
+                        <h5>Aquila Fly (Inalámbrico 2.4GHz)</h5>
+                        <h6>$35</h6>
+                        <button type="button" class="btn btn-info">Agregar al Carrito</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <img src="assets/Mouses/Aurora.jpg" alt="">
+                        <h5>Aurora (Alámbrico 72g)</h5>
+                        <h6>$20</h6>
+                        <button type="button" class="btn btn-info">Agregar al Carrito</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                        <img src="assets/Mouses/Hero.jpg" alt="">
+                        <h5>Hero (Alámbrico 100g)</h5>
+                        <h6>$15</h6>
+                        <button type="button" class="btn btn-info">Agregar al Carrito</button>
                     </div>
                 </div>
             </div>
         </section>
         
     </main>
-
+    
     <footer>
         <div class="footer">
-            <div class="footer_options">
-                <a href="pages/location.html">Tiendas</a>
-                <a href="pages/contact.html">Contacto</a>
-                <a href="pages/tutorials.html">Tutoriales</a>
-            </div>
             <div class="footer_social_networks">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <div class="facebook">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div class="twitter">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="instagram">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="copy-right">
+                <p>©Copyright 2022 VSG Todos los derechos reservados | Términos y Condiciones | Políticas de Privacidad | Políticas de Cookies</p>
             </div>
         </div>
     </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 
 </html>
