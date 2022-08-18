@@ -2,17 +2,11 @@
 * {
   padding: 0;
   margin: 0;
-  color: #fff;
+  color: black;
   font-family: 'Indie Flower', cursive;
 }
 
-.header1 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
-.main_grid_header {
+.main-grid_header {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2;
@@ -24,10 +18,10 @@
   height: -moz-fit-content;
   height: fit-content;
   top: 0;
-  background-color: black;
+  background-color: white;
 }
 
-.carrito_div {
+.carrito-div {
   -ms-grid-column: 2;
   grid-column: 2 / 2;
   display: -webkit-box;
@@ -55,7 +49,7 @@
   margin-top: 15px;
 }
 
-#control_logo {
+#control-logo {
   margin-left: 300px;
   margin-top: -50px;
 }
@@ -67,17 +61,18 @@
   margin-top: 25px;
 }
 
-#main_picture {
+#main-picture {
   width: 100%;
+  margin-bottom: 20px;
 }
 
-#main_picture img {
+#main-picture img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
 }
 
-.bienvenidos_inner_div {
+.bienvenidos-inner_div {
   font-size: 50px;
   width: 100%;
   display: -webkit-box;
@@ -91,7 +86,7 @@
   opacity: 0.75;
 }
 
-.bienvenidos_ver_productos_div {
+.bienvenidos-productos_div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,7 +99,7 @@
   top: 75%;
 }
 
-.ver_producto_btn {
+.ver-producto_btn {
   width: 100%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -115,7 +110,11 @@
   font-size: 20px;
 }
 
-.main_menu_logos {
+#nuestros-productos {
+  margin-bottom: 20px;
+}
+
+.main-menu_logos {
   width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,7 +129,7 @@
 
 main {
   text-align: center;
-  background-color: black;
+  background-color: white;
   padding-bottom: 50px;
 }
 
@@ -145,30 +144,18 @@ main {
   margin-bottom: 10px;
 }
 
-.brand {
-  margin: 5px;
-  padding: 10px;
-}
-
-.filter_phrase {
-  margin: 5px;
-  padding-right: 10px;
-  padding-top: 15px;
-  font-size: medium;
-}
-
 .footer {
   padding-bottom: 5px;
   text-align: center;
-  background-color: black;
+  background-color: white;
 }
 
 .footer a {
   text-decoration: none;
-  color: #fff;
+  color: black;
 }
 
-.footer_social_networks {
+.footer-social_networks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

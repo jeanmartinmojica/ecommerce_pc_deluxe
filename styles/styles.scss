@@ -7,11 +7,7 @@
     color: $fontColor;
     font-family: 'Indie Flower', cursive;;;
 }
-.header1{
-    position: sticky;
-    top: 0;
-} 
-.main_grid_header{
+.main-grid_header{
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: 1;
@@ -20,7 +16,7 @@
     top: 0;
     background-color: $backgroundColor;
 }
-.carrito_div{
+.carrito-div{
     grid-column: 2 / 2;
     display: flex;
     flex-direction: row;
@@ -33,7 +29,7 @@
     margin-left: 25px;
     margin-top: 15px;
 }
-#control_logo{
+#control-logo{
     margin-left: 300px;
     margin-top: -50px;
 }
@@ -43,14 +39,15 @@ font-size: 30px;
 margin-left: 25px;    
 margin-top: 25px;
 }
-#main_picture{
+#main-picture{
     width: 100%;
+    margin-bottom: 20px;
     img{
         object-fit: cover;
         width: 100%;
     }
 }
-.bienvenidos_inner_div{
+.bienvenidos-inner_div{
     font-size: 50px;
     width: 100%;
     display: flex;
@@ -59,20 +56,23 @@ margin-top: 25px;
     color: #fff;
     opacity: 0.75;
 }
-.bienvenidos_ver_productos_div{
+.bienvenidos-productos_div{
     display: flex;
     flex-direction: column;
     width: 100%;
     position: absolute;
     top: 75%;
 }
-.ver_producto_btn{
+.ver-producto_btn{
     width: 100%;
     display: inline-flex;
     justify-content: center;
     font-size: 20px;   
 }
-.main_menu_logos{
+#nuestros-productos{
+    margin-bottom: 20px;
+}
+.main-menu_logos{
     width: 100px;
     display: flex;
     flex-direction: row;
@@ -93,16 +93,6 @@ main{
         margin-bottom: 10px;
     }
 } 
-.brand{
-    margin: 5px;
-    padding: 10px;
-}
-.filter_phrase{
-    margin: 5px;
-    padding-right: 10px;
-    padding-top: 15px;
-    font-size: medium;
-}
 .footer{
     padding-bottom: 5px;
     text-align: center;
@@ -112,7 +102,7 @@ main{
     }
     background-color: $backgroundColor;
 }
-.footer_social_networks{
+.footer-social_networks{
     display: flex;
     flex-direction: row;
     justify-content:center;
