@@ -131,3 +131,25 @@ main{
     opacity:1;
     color: whitesmoke;
 }
+
+#div-btn-eliminar {   
+    .btn_eliminar{
+        background-color: transparent;    
+    }
+    button {
+        cursor:pointer;
+        background-color: none;
+        width: fit-content;
+        height: fit-content;
+        border: none;
+        .fa-trash {
+            margin-right: 20px;
+        }
+        &:hover {
+            transition: all .4s;
+            transform: translateY(-5px);
+            box-shadow: 2px 2px 2px 1px rgba(186, 17, 17, 0.2);
+            border-radius: 50%;
+        }
+    }
+}

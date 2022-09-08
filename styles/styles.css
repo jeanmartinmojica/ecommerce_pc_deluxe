@@ -205,4 +205,34 @@ main {
   opacity: 1;
   color: whitesmoke;
 }
+
+#div-btn-eliminar .btn_eliminar {
+  background-color: transparent;
+}
+
+#div-btn-eliminar button {
+  cursor: pointer;
+  background-color: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: none;
+}
+
+#div-btn-eliminar button .fa-trash {
+  margin-right: 20px;
+}
+
+#div-btn-eliminar button:hover {
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 2px 2px 2px 1px rgba(186, 17, 17, 0.2);
+          box-shadow: 2px 2px 2px 1px rgba(186, 17, 17, 0.2);
+  border-radius: 50%;
+}
 /*# sourceMappingURL=styles.css.map */

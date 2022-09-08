@@ -1,16 +1,29 @@
 let carrito = []
+let valorActualDolar=0
 let lista = document.getElementById("milista")
+
+await obtenerValorDolar().then(a=>{valorActualDolar=a
+    console.log(valorActualDolar)
+})
+
+async function obtenerValorDolar(){
+    const apiDeDolar = "https://s3.amazonaws.com/dolartoday/data.json"
+    const resp = await fetch(apiDeDolar)
+    const factorDolar = await resp.json()
+    return factorDolar.USDCOL.ratecash
+}
 
 renderizarProductos()
 
 localStorage.getItem("carrito")!=null ?(JSON.parse(localStorage.getItem("carrito")).forEach((producto)=>{agregarAlCarrito(producto)})):""
-    
+
 function renderizarProductos() {
     for (const producto of productos) {
         lista.innerHTML += `<li class="col-md-4 list-group-item">
             <h5>${producto.nombre}</h5>
             <img src=${producto.foto} width="300" height="250">
-            <h5>$ ${producto.precio}</h5>
+            <h5>$ ${producto.precio*valorActualDolar} COP</h5>
+            <h5>$ ${producto.precio}USD</h5>
             <button class='btn btn-info' id='btn${producto.id}'>Agregar al Carrito</button>
         </li>`
     }
@@ -48,6 +61,14 @@ function calculcarPrecioFinalCarrito() {
     return totalCarritoCompra
 }
 
+function calculcarPrecioFinalCarritoCOP() {
+    let totalCarritoCompra = 0
+    carrito.forEach((producto) => {
+        totalCarritoCompra += producto.precioFinal * valorActualDolar
+    })
+    return totalCarritoCompra
+}
+
 function dibujarPrecioFinal() {
     document.getElementById("tablafoot").innerHTML = `
         <tfoot>
@@ -57,7 +78,11 @@ function dibujarPrecioFinal() {
                 </td>
     
                 <td>
-                    ${calculcarPrecioFinalCarrito()}
+                    ${calculcarPrecioFinalCarrito()} USD
+                </td>
+
+                <td>
+                    ${calculcarPrecioFinalCarritoCOP()} COP
                 </td>
     
             </tr>
@@ -83,7 +108,8 @@ function dibujarPrecioFinal() {
                 <th scope="col">ID</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Cantidad</th>
-                <th scope="col">Total</th>
+                <th scope="col">Total USD</th>
+                <th scope="col">Total COP</th>
             </tr>     
         `     
         }    
@@ -127,11 +153,13 @@ function agregarAlCarrito(producto) {
             <td>${producto.nombre}</td>
             <td><input type="number" id="cantidad-producto-${producto.id}" value = "${producto.cantidad}"min="1" max="1000" style="width: 50px"></input></td>
             <td id="valorActual${producto.id}">${producto.precio}</td>
-            <td><button id="eliminar-producto-${producto.id}" type="button" class="btn btn-outline-danger">Eliminar</button></td>             
+            <td id="valorActualCOP${producto.id}">${producto.precio*valorActualDolar}</td>
+            <td id="div-btn-eliminar"><button class="btn_eliminar" id="eliminar-producto-${producto.id}" style="--bs-btn-padding-y: 10px; --bs-btn-padding-x: 10px; class="btn btn-outline-danger" ><i class="fa-solid fa-trash fa-lg"></i></i></button></td>          
         </tr>
     `
 
     producto.precioFinal = producto.precio * producto.cantidad
+    producto.precioFinalCOP = producto.precio * producto.cantidad * valorActualDolar
     
     dibujarPrecioFinal()
 
@@ -143,6 +171,12 @@ function agregarAlCarrito(producto) {
             producto.precioFinal = nuevoPrecio
             document.getElementById(`valorActual${producto.id}`).innerHTML = `
         <td id="cantidad-producto-${producto.id}">${nuevoPrecio}</td>
+    `
+
+    let nuevoPrecioCOP = producto.precio * valorInput.value * valorActualDolar
+            producto.precioFinalCOP = nuevoPrecioCOP
+            document.getElementById(`valorActualCOP${producto.id}`).innerHTML = `
+        <td id="cantidad-producto-${producto.id}">${nuevoPrecioCOP}</td>
     `
             dibujarPrecioFinal()
 
@@ -180,3 +214,5 @@ function eliminarProducto(producto) {
     carrito.length == 0 ? (document.getElementById("tablabody").innerHTML = ``):''
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
+
+
